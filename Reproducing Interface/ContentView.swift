@@ -9,13 +9,45 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack{
+            //First layer
+            Rectangle()
+                .foregroundStyle(Color("DarkGrey"))
+                .ignoresSafeArea()
+            VStack {
+                Image("Cover")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300)
+                Spacer()
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("Young Lion")
+                            .foregroundStyle(.white)
+                            .font(.title3)
+                            .fontWeight(.medium)
+                        Text("Miles Mosley")
+                            .foregroundStyle(.gray)
+                            .font(.title3)
+                            .fontWeight(.medium)
+                    }
+                    Spacer()
+                        .frame(width: 200)
+                    ZStack{
+                        Circle()
+                            .foregroundColor(.pGrey)
+                            .frame(width: 35)
+                        
+                        Image(systemName: "ellipsis")
+                            .foregroundColor(.white)
+                            .fontWeight(.heavy)
+                        
+                    }
+                    
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
