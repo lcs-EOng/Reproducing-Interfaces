@@ -20,6 +20,7 @@ struct ContentView: View {
                     .scaledToFit()
                     .frame(width: 300)
                 Spacer()
+                    .frame(height: 100)
                 HStack{
                     VStack(alignment: .leading){
                         Text("Young Lion")
@@ -45,6 +46,42 @@ struct ContentView: View {
                     }
                     
                 }
+                Spacer()
+                    .frame(height: 30)
+                RoundedRectangle(cornerRadius: 12)
+                    .frame(height: 8)
+                    .foregroundColor(.gray)
+                Spacer()
+                    .frame(height: 10)
+                HStack{
+                    Text("0:00")
+                        .foregroundStyle(.gray)
+                        .font(.caption)
+                    Spacer()
+                    Text("-4:09")
+                        .foregroundStyle(.gray)
+                        .font(.caption)
+                }
+                Spacer()
+                HStack{
+                    Image(systemName: "backward.fill")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                    Spacer()
+                        .frame(width: 60)
+                    Image(systemName: "play.fill")
+                        .foregroundColor(.white)
+                        .font(.custom("Big", size: 50))
+                    Spacer()
+                        .frame(width: 60)
+                    Image(systemName:"forward.fill")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                    
+                    
+                }
+                
+                
             }
             .padding()
         }
