@@ -80,6 +80,34 @@ struct ContentView: View {
                     
                     
                 }
+                Spacer()
+                HStack{
+                    Image(systemName:"speaker.fill")
+                        .foregroundColor(Color("LGray"))
+                    RoundedRectangle(cornerRadius: 12)
+                        .frame(width:275,height: 8)
+                        .foregroundColor(.gray)
+                    Image(systemName:"speaker.wave.2.fill")
+                        .foregroundColor(Color("LGray"))
+                }
+                Spacer()
+                HStack{
+                    Image(systemName: "quote.bubble")
+                        .foregroundColor(.pGrey)
+                        .font(.title)
+                    Spacer()
+                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    Image("123")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                    Spacer()
+                        .frame(width: 100)
+                    
+                    Image(systemName: "list.bullet")
+                        .foregroundColor(Color("LGray"))
+                        .font(.title)
+                }
                 
                 
             }
